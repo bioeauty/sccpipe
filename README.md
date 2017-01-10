@@ -9,4 +9,5 @@ sscpipe -I <InFileDir> -O <OUTFileDir> -G <GTFFILE> -Index <Index File>
 * STAR  -- Aligment Tools 
 * cutadapt -- A python lib for adapter and ploy A/T trimming
 * BBmap -- we use the subfunction bbduk2 to filter the barcode
+* HTSeq -- for quantify the gene expression(pip install)
 
