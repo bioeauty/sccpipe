@@ -9,10 +9,11 @@ sscpipe -I <Input File Directory> -O <Output File Directory> -B <Barcode file in
 
 ```
 ### sscpipe.conf
+
 ################################ ssc.conf #######################################
-#																				                                        #
-#	 			      Configure the basic parameters for sscpipe					            	#
-#																				                                        #
+#																				#
+#	 			Configure the basic parameters for sscpipe						#
+#																				#
 #################################################################################
 
 #The full path of your genome index
