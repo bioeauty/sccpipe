@@ -3,16 +3,16 @@ A pipeline for scRNA sequence analysis -- for c1 only
 
 ```shell
 Usage
-sscpipe -I <Input File Directory> -O <Output File Directory> -B <Barcode file in text>
+sccpipe -I <Input File Directory> -O <Output File Directory> -B <Barcode file in text>
 ```
-> For the first time, the ssc.conf should be filled 
+> For the first time, the scc.conf should be filled 
 
 ```
-### sscpipe.conf
+### sccpipe.conf
 
-################################ ssc.conf #######################################
+################################ scc.conf #######################################
 #																				#
-#	 			Configure the basic parameters for sscpipe						#
+#	 			Configure the basic parameters for sccpipe						#
 #																				#
 #################################################################################
 
