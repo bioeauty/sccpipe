@@ -6,6 +6,23 @@ Usage
 sscpipe -I <Input File Directory> -O <Output File Directory> -B <Barcode file in text>
 ```
 > For the first time, the ssc.conf should be filled 
+
+### sscpipe.conf
+################################ ssc.conf #######################################
+#																				                                        #
+#	 			      Configure the basic parameters for sscpipe					            	#
+#																				                                        #
+#################################################################################
+
+#The full path of your genome index
+Indexpath=<>
+#The full Path of your GTF file 
+GTFFile=<>
+#the CPU Thread  default = (maximum CPU cores -4)
+Core_use=<>
+```
+
+```
 ## Dependencies
 * [paralell](https://www.gnu.org/software/parallel/) -- (for parallel computing)
 * [STAR](https://github.com/alexdobin/STAR)    -- Aligment Tools 
