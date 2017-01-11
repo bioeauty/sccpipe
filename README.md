@@ -5,7 +5,7 @@ A pipeline for scRNA sequence analysis -- for c1 only
 Usage
 sscpipe -I <Input File Directory> -O <Output File Directory> -B <Barcode file in text>
 ```
-## Requirements
+## Dependencies
 * [paralell](https://www.gnu.org/software/parallel/) -- (for parallel computing)
 * [STAR](https://github.com/alexdobin/STAR)    -- Aligment Tools 
 * [cutadapt](http://cutadapt.readthedocs.io/en/stable/guide.html) -- A python lib for adapter and ploy A/T trimming(pip install)
