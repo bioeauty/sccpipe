@@ -58,3 +58,15 @@ biocLite("scater")
 # last step 
 git https://github.com/bioeauty/sccpipe.git
 ```
+
+### Add to environment
+```
+#open bashrc file by ` vim ~/.bashrc` and add the following to the bottom of bashrc
+export PATH=<the full path where you put the pipeline>/sccpipe:$PATH
+export PATH=<the full path where you put the pipeline>/sccpipe/scripts:$PATH
+#then write and quit
+source ~/.bashrc
+
+
+
+```
