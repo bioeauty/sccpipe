@@ -56,7 +56,7 @@ sudo pip install HTSeq
 source("https://bioconductor.org/biocLite.R")
 biocLite("scater")
 # last step 
-git https://github.com/bioeauty/sccpipe.git
+git clone https://github.com/bioeauty/sccpipe.git
 ```
 
 ### Add to environment
@@ -66,7 +66,4 @@ export PATH=<the full path where you put the pipeline>/sccpipe:$PATH
 export PATH=<the full path where you put the pipeline>/sccpipe/scripts:$PATH
 #then write and quit
 source ~/.bashrc
-
-
-
 ```
