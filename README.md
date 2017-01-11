@@ -32,7 +32,29 @@ Core_use=<>
 * [HTSeq](http://www-huber.embl.de/users/anders/HTSeq/doc/overview.html)    -- for quantify the gene expression(pip install)
 * [scater](http://bioconductor.org/packages/release/bioc/html/scater.html)   -- (Bioconductor R package -for constructing SCESET)
 
-## Installation
+## Installation (Test on Ubuntu)
 ```shell
+# install parallel
+sudo apt-get install parallel  
+
+# install STAR 
+
+#install cutadpat (if pip is not in place, you need to install pip first)
+sudo pip install cutadpat
+
+# install bbmap (download )
+tar zxvf BBMap_36.84.tar.gz
+cd bbmap/jni
+make -f makefile.linux
+cd ../../
+
+# install HTSeq
+sudo pip install HTSeq
+
+# install scatter
+# enter R
+source("https://bioconductor.org/biocLite.R")
+biocLite("scater")
+# last step 
 git https://github.com/bioeauty/sccpipe.git
 ```
