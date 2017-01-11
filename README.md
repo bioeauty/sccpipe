@@ -24,7 +24,6 @@ GTFFile=<>
 Core_use=<>
 ```
 
-```
 ## Dependencies
 * [paralell](https://www.gnu.org/software/parallel/) -- (for parallel computing)
 * [STAR](https://github.com/alexdobin/STAR)    -- Aligment Tools 
