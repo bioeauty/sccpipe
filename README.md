@@ -13,3 +13,7 @@ sscpipe -I <Input File Directory> -O <Output File Directory> -B <Barcode file in
 * [HTSeq](http://www-huber.embl.de/users/anders/HTSeq/doc/overview.html)    -- for quantify the gene expression(pip install)
 * [scater](http://bioconductor.org/packages/release/bioc/html/scater.html)   -- (Bioconductor R package -for constructing SCESET)
 
+## Installation
+```shell
+git https://github.com/bioeauty/sccpipe.git
+```
