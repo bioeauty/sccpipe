@@ -24,7 +24,7 @@ GTFFile=<>
 Core_use=<>
 ```
 
-## Dependencies
+## Dependencies (make sure the dependencies are in your enviroment)
 * [paralell](https://www.gnu.org/software/parallel/) -- (for parallel computing)
 * [STAR](https://github.com/alexdobin/STAR)    -- Aligment Tools 
 * [cutadapt](http://cutadapt.readthedocs.io/en/stable/guide.html) -- A python lib for adapter and ploy A/T trimming(pip install)
