@@ -7,6 +7,7 @@ sscpipe -I <Input File Directory> -O <Output File Directory> -B <Barcode file in
 ```
 > For the first time, the ssc.conf should be filled 
 
+```
 ### sscpipe.conf
 ################################ ssc.conf #######################################
 #																				                                        #
