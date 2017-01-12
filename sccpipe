@@ -5,7 +5,8 @@
 
 # for parameter pass and help documents
 
-source sccpipe.conf
+#source sccpipe.conf
+. sccpipe.conf
 Core=$(cat /proc/cpuinfo | grep process| wc -l)
 Core_use_back=`echo $Core-4|bc`
 
@@ -139,7 +140,7 @@ mkdir $location_out
 echo "-----------------------------------------------------"
 echo "************1. Filtering Illumina Index**************"
 echo $(date +"%b %d %T")" ..... Start 1"
-bbduk2.sh -Xmx24G in=$FullInPath"/"$in1 in2=$FullInPath"/"$in2 out1=$Indexfilter"/"$Samplename"_filter_R1.fastq" out2=$Indexfilter"/"$Samplename"_filter_R2.fastq" outm=$Indexfilter_unmatched"/"$Samplename"_unmatch_R1.fastq" outm2=$Indexfilter_unmatched"/"$Samplename"_unmatch_R2.fastq" barcode=$barcodefile barcodefilter=t 1>>$logfile 2>>$errlog
+bash /home/ggj/Documents/Genome-tools/bbmap/bbduk2.sh -Xmx24G in=$FullInPath"/"$in1 in2=$FullInPath"/"$in2 out1=$Indexfilter"/"$Samplename"_filter_R1.fastq" out2=$Indexfilter"/"$Samplename"_filter_R2.fastq" outm=$Indexfilter_unmatched"/"$Samplename"_unmatch_R1.fastq" outm2=$Indexfilter_unmatched"/"$Samplename"_unmatch_R2.fastq" barcode=$barcodefile barcodefilter=t 1>>$logfile 2>>$errlog
 echo $(date +"%b %d %T")" ..... End 1"
 echo "-----------------------------------------------------"
 echo ""
@@ -241,12 +242,12 @@ do
   if [ $shouldwait -eq 0 ];
   then
     echo $(date +"%b %d %T")" ..... Start the "$samcount" cell Quantification, "$((800-$samcount))" left"
-    echo -e "gene_name\t"$dgename>$DGEOut"/"$dgename
+    echo  "gene_name\t"$dgename>$DGEOut"/"$dgename
     htseq-count -q -i gene_name $i $GTFFile >> $DGEOut"/"$dgename 2>>$errlog & 
     wait
   else 
     echo $(date +"%b %d %T")" ..... Start the "$samcount" cell Quantification, "$((800-$samcount))" left"
-    echo -e "gene_name\t"$dgename>$DGEOut"/"$dgename
+    echo "gene_name\t"$dgename>$DGEOut"/"$dgename
     htseq-count -q -i gene_name $i $GTFFile >> $DGEOut"/"$dgename 2>>$errlog &
   fi
 done
@@ -257,7 +258,7 @@ echo "-----------------------------------------------------"
 echo "************9. merge DGE file************************"
 echo $(date +"%b %d %T")" ..... Start 9"
 
-$dgemerge=$FullOutPath"/"$Samplename"_9_DGE_OUT"
+dgemerge=$FullOutPath"/"$Samplename"_9_DGE_OUT"
 mkdir $dgemerge
 
 paste $DGEOut"/"* > $dgemerge"/tem_file"
